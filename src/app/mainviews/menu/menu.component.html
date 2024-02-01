@@ -1,0 +1,26 @@
+<!-- app.component.html -->
+
+
+ <img   *ngIf="toggleMenuVisibility()"  (click)="toggleMenu()" class="centered-menuIcon"  src="/assets/img/menu_icon.png" alt="Zentriertes Bild">    
+
+<div  class="menu-container" [ngClass]="{ 'menu-open': isMenuOpen }">
+  <ul>
+    <li>
+      <div class="iconBox">
+        <img  (click)="timeStampClick()" class="centered-menuButton" title="Zeitbuchung" src="/assets/img/timeStamp_icon.png" alt="timeStamp"></div>
+    </li>
+    <li>
+      <div class="iconBox">
+        <img (click)="tripSearchClick()" class="centered-menuButton" title="Fahrtensuche" src="/assets/img/search_icon.png" alt="search_trip"></div>
+    </li>
+    <li>
+      <div class="iconBox">
+        <img (click)="newTripClick()" class="centered-menuButton" title="neue Fahrt" src="/assets/img/addTripp_icon.png" alt="add_trip"></div>
+    </li>
+    <li>
+      <div class="iconBox">
+        <img (click)="logOutClick()" class="centered-menuButton" title="Abmelden" src="/assets/img/logout_icon.png" alt="logout"></div>
+    </li>
+  </ul>
+</div>
+

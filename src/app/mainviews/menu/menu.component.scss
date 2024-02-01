@@ -1,0 +1,56 @@
+/* styles.scss oder dein entsprechendes SCSS-Datei */
+
+.centered-menuButton {
+  height: 30px;
+  width: 30px;
+  cursor: pointer; 
+}
+
+.iconBox{
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-menuIcon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer; 
+  margin-top: 10px;
+  margin-left: 85%;
+ 
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  margin-top: -50px;
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 1;
+  height: 57px;
+}
+
+.menu-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-container li {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-container li:hover {
+  background-color: #ddd;
+}
+
+.menu-open {
+  display: flex;
+}

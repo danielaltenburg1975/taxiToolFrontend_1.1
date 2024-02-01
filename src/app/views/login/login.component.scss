@@ -1,0 +1,42 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; 
+    margin: auto; 
+    margin-top: 80px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  label {
+    margin-bottom: 5px; 
+    font-size: 65%;
+    margin-top: 30px;
+    
+  }
+  
+  input {
+    padding: 5px; 
+    margin-bottom: 10px; 
+    background-color: rgba(0, 0, 0, 0.05);
+   
+}
+  
+  button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(0,0,0,0.05);    
+    color: black;
+    border: none; /* Entfernt den Standard-Rahmen des Buttons */
+    outline: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Ändere die Hintergrundfarbe bei Hover */
+}
+  

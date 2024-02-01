@@ -1,0 +1,14 @@
+<form class="login-form" *ngIf="toggleLoginVisibility()">
+  
+    <label for="username">Benutzername:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username">
+  
+    <label for="password">Passwort:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password">
+  
+    <button type="submit" (click)="login()">Anmelden</button>
+   
+  </form>
+
+  
+ 
