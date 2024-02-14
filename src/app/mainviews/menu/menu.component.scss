@@ -1,9 +1,9 @@
-/* styles.scss oder dein entsprechendes SCSS-Datei */
+
 
 .centered-menuButton {
   height: 30px;
   width: 30px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .iconBox{
@@ -13,15 +13,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0.5px solid #000;
+
+}
+.custom-input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 25px;
 }
 
 .centered-menuIcon {
   height: 40px;
   width: 40px;
-  cursor: pointer; 
+  cursor: pointer;
   margin-top: 10px;
   margin-left: 85%;
- 
+
 }
 
 .menu-container {
@@ -29,9 +36,10 @@
   position: absolute;
   margin-top: -50px;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   z-index: 1;
   height: 57px;
+
 }
 
 .menu-container ul {
@@ -45,10 +53,6 @@
   padding: 8px;
   text-align: center;
   cursor: pointer;
-}
-
-.menu-container li:hover {
-  background-color: #ddd;
 }
 
 .menu-open {

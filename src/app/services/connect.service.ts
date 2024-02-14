@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 interface LoginResponse {
   role: string;
+  name: string
 }
 
 
@@ -11,16 +12,16 @@ interface LoginResponse {
   providedIn: 'root',
 })
 export class ConnectService {
-  private baseUrl = 'http://localhost:8080'; // set the basic 
+  private baseUrl = 'http://localhost:8080'; // set the basic
   private username: string = '';
   private password: string = '';
 
   constructor(private http: HttpClient) {}
 
-  setCredentials(username: string, password: string): void {    
+  setCredentials(username: string, password: string): void {
     this.username = username;
     this.password = password;
-    
+
   }
 
   getConnect(endpoint: string): Observable<LoginResponse> {

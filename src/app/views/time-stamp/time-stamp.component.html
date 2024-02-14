@@ -1,3 +1,14 @@
+
+
+
 <div *ngIf="toggleTimeStampVisibility()">
-    <p>time-stamp works!</p>
-</div>  
+
+    <div class="button-container" (click)="startStopwatch()">
+      <img src="assets/img/timeStamp_button.png" alt="Zeitstempelbutton" class="timeStampImage">
+    </div>
+
+    <div  class="timerContainer">
+        <label class="timerLabel">{{ getElapsedTime()}}</label>
+      </div>
+
+</div>

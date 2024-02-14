@@ -1,3 +1,14 @@
-<div *ngIf="toggleNewTripVisibility()">
-    <p>new-trip works!</p>
-</div>
+
+
+<form *ngIf="toggleNewTripVisibility()">
+  <div class="custom-dropdown-container">
+    <label class="label-container">Neue Fahrt</label>
+    <label for="customerInput">Fahrgast:</label>
+    <div class="custom-dropdown">
+      <input type="text" id="customerInput" [(ngModel)]="selectedValue" name="customerInput" (input)="filterOptions()" class="custom-input">
+      <ul *ngIf="showDropdown">
+        <li *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="dropMenu" >{{ option.label }}</li>
+      </ul>
+    </div>
+  </div>
+</form>

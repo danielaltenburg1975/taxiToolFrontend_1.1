@@ -1,0 +1,42 @@
+.custom-dropdown-container {
+  margin-top:40px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-dropdown {
+
+  position: relative;
+  margin-left: 25px;
+  margin-bottom:20py;
+
+}
+.dropMenu{
+  background-color: #eaeaea;}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+li {
+  cursor: pointer;
+}
+
+.custom-dropdown-styles {
+  font-size: 16px;
+  padding: 8px;
+}
+
+/* Du kannst die allgemeinen Dropdown-Stile hier hinzufügen, falls benötigt */
+.custom-dropdown {
+  /* Allgemeine Dropdown-Stile hier */
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+}
+

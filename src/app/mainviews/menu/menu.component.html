@@ -1,20 +1,26 @@
 <!-- app.component.html -->
 
 
- <img   *ngIf="toggleMenuVisibility()"  (click)="toggleMenu()" class="centered-menuIcon"  src="/assets/img/menu_icon.png" alt="Zentriertes Bild">    
+ <img   *ngIf="toggleMenuVisibility()"  (click)="toggleMenu()" class="centered-menuIcon"  src="/assets/img/menu_icon.png" alt="Zentriertes Bild">
 
 <div  class="menu-container" [ngClass]="{ 'menu-open': isMenuOpen }">
   <ul>
     <li>
-      <div class="iconBox">
+      <div class="iconBox" [style.background-color]="isAdminSettingsVisible() ? '#eaeaea' : 'white'"
+           *ngIf="toggleAdminSetting()">
+        <img  (click)="adminSettingClick()" class="centered-menuButton" title="Settings" src="/assets/img/setting_icon.png" alt="settings"></div>
+    </li>
+    <li>
+      <div class="iconBox" [style.background-color]="isTimeStampVisible() ? '#eaeaea' : 'white'"
+           *ngIf="toggleTimeStamp()">
         <img  (click)="timeStampClick()" class="centered-menuButton" title="Zeitbuchung" src="/assets/img/timeStamp_icon.png" alt="timeStamp"></div>
     </li>
     <li>
-      <div class="iconBox">
+      <div class="iconBox" [style.background-color]="isTripSearchVisible() ? '#eaeaea' : 'white'">
         <img (click)="tripSearchClick()" class="centered-menuButton" title="Fahrtensuche" src="/assets/img/search_icon.png" alt="search_trip"></div>
     </li>
     <li>
-      <div class="iconBox">
+      <div class="iconBox" [style.background-color]="isNewTripVisible() ? '#eaeaea' : 'white'">
         <img (click)="newTripClick()" class="centered-menuButton" title="neue Fahrt" src="/assets/img/addTripp_icon.png" alt="add_trip"></div>
     </li>
     <li>

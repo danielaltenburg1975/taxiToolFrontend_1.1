@@ -1,0 +1,35 @@
+/* app.component.css */
+
+
+
+.button-container{
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  margin: 100px auto 0; /* Oben 100px, horizontal zentriert */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1.25px solid #000;
+
+  }
+
+.timeStampImage {
+  width: 120px;
+  height: 120px;
+
+
+  }
+
+  .timerContainer{
+  display: flex;
+    margin: 100px auto 0; /* Oben 100px, horizontal zentriert */
+    justify-content: center;
+    align-items: center;
+  }
+
+ .timerLabel{
+   font-size: 30px;          // Größere Schrift
+   font-weight: bold;        // Fettformatierung
+ }

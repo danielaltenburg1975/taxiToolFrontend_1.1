@@ -22,7 +22,7 @@ export class VisibleService {
     this.isAdminSettingVisible = false;
 
   }
-  
+
 
   setLoginVisible(visible:boolean){
     this.isLoginVisible = visible;
@@ -31,7 +31,7 @@ export class VisibleService {
     return this.isLoginVisible;
   }
 
-  
+
   setMenuVisible(visible:boolean){
     this.isMenuVisible = visible;
   }
@@ -73,4 +73,6 @@ export class VisibleService {
   getAdminSettingsVisible(){
     return this.isAdminSettingVisible;
   }
+
+
 }
