@@ -1,0 +1,29 @@
+.custom-dropdown {
+  position: relative;
+  input[type="text"] {
+  margin-top: 10px;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1.5px solid black;
+
+  outline: none; /* Entferne den Standard-Fokus-Rahmen */
+  width: 200px; /* Setze die Breite nach Bedarf */
+  cursor: pointer;
+    /* Weitere Stile oder Anpassungen nach Bedarf */
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

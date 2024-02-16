@@ -1,0 +1,6 @@
+<div class="custom-dropdown">
+  <input type="text" [(ngModel)]="userInput" (input)="filterOptions()" placeholder="{{ placeholder }}">
+  <ul *ngIf="showDropdown">
+    <li *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="dropMenu">{{ option.label }}</li>
+  </ul>
+</div>
