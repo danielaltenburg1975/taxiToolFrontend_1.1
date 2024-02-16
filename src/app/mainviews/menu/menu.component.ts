@@ -1,6 +1,7 @@
 import { Component, Renderer2, ElementRef } from '@angular/core';
 import { VisibleService } from 'src/app/services/visible.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-menu',

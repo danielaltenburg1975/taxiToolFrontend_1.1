@@ -7,36 +7,32 @@ import { VisibleService } from 'src/app/services/visible.service';
   styleUrls: ['./new-trip.component.scss']
 })
 export class NewTripComponent {
-showDropdown: boolean = false;
-userInput: string ='';
-selectedValue: string ='';
-filteredOptions: { label: string }[] = [];
-  dropdownCustomer = [
+
+dropdownCustomer = [
     { label: 'Daniel Altenburg' },
     { label: 'Max Mustermann' },
     { label: 'Heinz Beispiel' },
   ];
 
+  dropdownLocations = [
+    { label: 'Abholort 1' },
+    { label: 'Abholort 2' },
+    { label: 'Abholort 3' },
+  ];
 
   constructor(private visibleService: VisibleService) {}
-
-  filterOptions() {
-      this.filteredOptions = this.dropdownCustomer.filter(option =>
-        option.label.toLowerCase().includes(this.selectedValue.toLowerCase())
-      );
-      this.showDropdown = true;
-    }
 
   toggleNewTripVisibility(): boolean {
     return this.visibleService.getNewTripVisible();
   }
-  toggleDropdown() {
-      this.showDropdown = !this.showDropdown;
-    }
 
-    selectOption(option: { label: string }) {
-        this.selectedValue = option.label;
-        this.showDropdown = false;
-      }
+  selectCustomer(option: { label: string }) {
+    // Logic for customer selection
+    console.log('Selected Customer:', option.label);
+  }
 
+  selectLocation(option: { label: string }) {
+    // Logic for location selection
+    console.log('Selected Location:', option.label);
+  }
 }

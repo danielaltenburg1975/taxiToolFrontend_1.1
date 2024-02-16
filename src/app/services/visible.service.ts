@@ -15,11 +15,13 @@ export class VisibleService {
   isAdminSettingVisible: boolean = false;
 
   setAllMenupointsInvisible(){
+
     this.isNewTripVisible = false;
     this.isTripSearchVisible = false;
     this.isTimeStampVisible = false;
     this.isTripCalculateVisible = false;
     this.isAdminSettingVisible = false;
+    console.log("hallo");
 
   }
 
