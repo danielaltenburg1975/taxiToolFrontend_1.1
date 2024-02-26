@@ -1,0 +1,26 @@
+<div class="timepicker-box">
+
+  <label class="header-label">Stunde</label>
+  <label class="header-label">Minuten</label>
+  <label class="header-label"></label>
+
+
+
+  <!-- hour picker -->
+  <div class="custom-dropdown">
+    <img src="assets/img/left_icon.png" alt="day minus" (click)="hourMinusClick()" class="icon">
+    <label class="date-label">{{ hour < 10 ? '0' + hour : hour }}</label>
+    <img src="assets/img/right_icon.png" alt="day plus" (click)="hourPlusClick()" class="icon">
+  </div>
+
+  <!-- minute picker -->
+  <div class="custom-dropdown">
+    <img src="assets/img/left_icon.png" alt="day minus" (click)="minuteMinusClick()" class="icon">
+    <label class="date-label">{{ minute < 10 ? '0' + minute : minute }}</label>
+    <img src="assets/img/right_icon.png" alt="day plus" (click)="minutePlusClick()" class="icon">
+  </div>
+
+  <img src="assets/img/timesearch_icon.png" alt="time search" (click)="startTimeSearch()" class="startTimeIcon">
+
+
+</div>

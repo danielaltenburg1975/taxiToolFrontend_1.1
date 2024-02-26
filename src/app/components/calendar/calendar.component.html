@@ -1,0 +1,17 @@
+<div class="calendar">
+  <div class="header">
+    <button (click)="previousMonth()" class="header-button"><<</button>
+    <label class="header-label">{{ currentMonth | date: 'MMMM yyyy' }}  </label>
+    <button (click)="nextMonth()" class="header-button">>></button>
+  </div>
+  <div class="weekdays">
+    <div>Mo</div>  <div>Di</div>  <div>Mi</div>  <div>Do</div>
+    <div>Fr</div>  <div>Sa</div>  <div>So</div>
+  </div>
+
+  <div class="days">
+    <div *ngFor="let day of daysInMonth" class="day" (click)="selectDate(day)" [ngClass]="{ 'first-day': day.isFirstDay }">
+      {{ day.date ? (day.date | date: 'd') : '' }}
+    </div>
+  </div>
+</div>

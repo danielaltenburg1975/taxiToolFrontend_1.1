@@ -1,0 +1,30 @@
+.timepicker-box{
+  width: 220px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+  justify-items: center;
+  border-bottom: 1.5px solid black;
+
+}
+
+.header-label {
+  color:gray;
+  font-size: 14px;
+}
+
+.icon{
+  width:10px;
+  height:10px;
+  cursor: pointer;
+}
+.startTimeIcon{
+  width:25px;
+  height:25px;
+  cursor: pointer;
+}
+.date-label{
+  margin-left:5px;
+  margin-right:5px;
+}

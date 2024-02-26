@@ -1,0 +1,31 @@
+<div class="datepicker-box">
+
+    <label class="header-label">Tag</label>
+    <label class="header-label">Monat</label>
+    <label class="header-label">Jahr</label>
+
+
+<!-- day picker -->
+    <div class="custom-dropdown">
+      <img src="assets/img/left_icon.png" alt="day minus" (click)="dayMinusClick()" class="icon">
+      <label class="date-label">{{ currentDay < 10 ? '0' + currentDay : currentDay }}</label>
+      <img src="assets/img/right_icon.png" alt="day plus" (click)="dayPlusClick()" class="icon">
+    </div>
+
+    <!-- month picker -->
+
+    <div class="custom-dropdown">
+      <img src="assets/img/left_icon.png" alt="month minus" (click)="monthMinusClick()" class="icon">
+      <label class="date-label">{{ currentMonth < 10 ? '0' + currentMonth : currentMonth }}</label>
+      <img src="assets/img/right_icon.png" alt="month plus" (click)="monthPlusClick()" class="icon">
+
+    </div>
+
+    <!-- year picker -->
+    <div class="custom-dropdown">
+      <img src="assets/img/left_icon.png" alt="year minus" (click)="yearMinusClick()" class="icon">
+      <label class="date-label">{{ currentYear }}</label>
+      <img src="assets/img/right_icon.png" alt="year plus" (click)="yearPlusClick()" class="icon">
+    </div>
+</div>
+
