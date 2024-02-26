@@ -1,29 +1,43 @@
 .custom-dropdown {
   position: relative;
   input[type="text"] {
-  margin-top: 10px;
-  padding: 2px;
+  margin-top: 15px;
+  padding: s;
   font-size: 16px;
   border: none;
-  border-bottom: 1.5px solid black;
 
-  outline: none; /* Entferne den Standard-Fokus-Rahmen */
-  width: 200px; /* Setze die Breite nach Bedarf */
+  outline: none;
+  width: 200px;
   cursor: pointer;
-    /* Weitere Stile oder Anpassungen nach Bedarf */
+
   }
 
   ul {
     list-style-type: none;
-    margin: 0;
+    font-size: 14px;
+    margin: 0.5;
     padding: 0;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1;
     background-color: #fff;
-    border: 1px solid #ccc;
+
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
   }
 }
+.input-box{
+  border-bottom: 1.5px solid black;
+}
+.icon{
+width:15px;
+hight:15px;
+cursor: pointer;
+
+}
+
+
+
+

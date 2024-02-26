@@ -22,8 +22,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { CustomDropdownComponent } from './components/custom-dropdown/custom-dropdown.component';
+import { CustomDatepickerComponent } from './components/custom-datepicker/custom-datepicker.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { CustomTimepickerComponent } from './components/custom-timepicker/custom-timepicker.component';
 
 
 
@@ -41,6 +45,9 @@ import { CustomDropdownComponent } from './components/custom-dropdown/custom-dro
     TripCalculateComponent,
     AdminSettingComponent,
     CustomDropdownComponent,
+    CustomDatepickerComponent,
+    CalendarComponent,
+    CustomTimepickerComponent,
 
 
   ],

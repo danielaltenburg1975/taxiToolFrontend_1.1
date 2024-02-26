@@ -1,5 +1,8 @@
 <div class="custom-dropdown">
-  <input type="text" [(ngModel)]="userInput" (input)="filterOptions()" placeholder="{{ placeholder }}">
+  <div class="input-box">
+    <input type="text" [(ngModel)]="userInput" (input)="filterOptions()" placeholder="{{ placeholder }}">
+    <img src="assets/img/dropdown-icon.png" alt="Toggle Dropdown" (click)="handleIconClick()" class="icon">
+  </div>
   <ul *ngIf="showDropdown">
     <li *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="dropMenu">{{ option.label }}</li>
   </ul>

@@ -21,8 +21,17 @@ export class CustomDropdownComponent {
     this.showDropdown = true;
   }
 
+  handleIconClick() {
+    this.userInput = ''; // Leere das Input-Feld
+    this.toggleDropdown(); // Dann öffne oder schließe das Dropdown-Menü
+  }
+
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
+
+    if (this.showDropdown) {
+      this.filterOptions();
+    }
   }
 
   selectOption(option: { label: string }) {

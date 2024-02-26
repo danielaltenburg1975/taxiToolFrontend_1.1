@@ -1,14 +1,40 @@
 
-.custom-dropdown-container {
+.main-container {
   margin-top: 40px;
   display: flex;
-  flex-direction: column; /* Hinzugefügt, um die Komponenten untereinander anzuordnen */
+  flex-direction: column;
   align-items: center;
-  justify-content: center; /* Hinzugefügt, um horizontal zu zentrieren */
+  justify-content: center;
 }
 
+.headlineLabel {
+  margin-bottom: 15px;
+  border-bottom: 2.0px solid black;
+  font-size:18px;
+  font-weight: bold;
+}
 
+.icon{
+  width:40px;
+  height:40px;
+  cursor: pointer;
+}
+.icon-box{
+  width:220px;
+  margin-top:15px;
+  display: flex;
+  justify-content: flex-end;
+  }
 
-
-
+  .textField {
+      margin-top: 10px;
+      padding: 5px; /* Beispiel-Padding-Wert hinzugefügt */
+      font-size: 16px;
+      border: none;
+      border-bottom: 1.5px solid black;
+      outline: none;
+      width: 220px;
+      cursor: pointer;
+      word-wrap: break-word;
+  }
 

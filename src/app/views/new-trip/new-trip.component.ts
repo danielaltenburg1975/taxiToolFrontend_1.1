@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VisibleService } from 'src/app/services/visible.service';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-new-trip',
@@ -8,17 +9,30 @@ import { VisibleService } from 'src/app/services/visible.service';
 })
 export class NewTripComponent {
 
+newTripFormVisible : boolean = true;
+
 dropdownCustomer = [
     { label: 'Daniel Altenburg' },
     { label: 'Max Mustermann' },
     { label: 'Heinz Beispiel' },
   ];
 
-  dropdownLocations = [
-    { label: 'Abholort 1' },
-    { label: 'Abholort 2' },
-    { label: 'Abholort 3' },
+  dropdownStartLocations = [
+    { label: 'ITZ Freiburg' },
+          { label: 'Strahlenklinik Uni' },
+          { label: 'Strahlenklinik Diakoni' },
+          { label: 'Strahlenklinik Singen' },
+          { label: 'Frauenklinik Uni' },
+          { label: 'Praxis Hoffmeister' },
   ];
+  dropdownEndLocations = [
+      { label: 'ITZ Freiburg' },
+      { label: 'Strahlenklinik Uni' },
+      { label: 'Strahlenklinik Diakoni' },
+      { label: 'Strahlenklinik Singen' },
+      { label: 'Frauenklinik Uni' },
+      { label: 'Praxis Hoffmeister' },
+    ];
 
   constructor(private visibleService: VisibleService) {}
 
@@ -26,13 +40,30 @@ dropdownCustomer = [
     return this.visibleService.getNewTripVisible();
   }
 
+
+
   selectCustomer(option: { label: string }) {
     // Logic for customer selection
     console.log('Selected Customer:', option.label);
   }
 
-  selectLocation(option: { label: string }) {
+  selectStartLocation(option: { label: string }) {
     // Logic for location selection
-    console.log('Selected Location:', option.label);
+    console.log('Selected Start Location:', option.label);
   }
+  selectEndLocation(option: { label: string }) {
+      // Logic for location selection
+      console.log('Selected End Location:', option.label);
+    }
+
+  cancelNewTripClick(){
+  }
+  cancelStartTimeClick(){
+    }
+  checkAndBookNewTripClick(){
+  }
+  checkAndBookStartTimeClick(){
+    }
+
+
 }

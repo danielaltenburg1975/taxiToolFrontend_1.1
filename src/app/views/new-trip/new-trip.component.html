@@ -1,15 +1,44 @@
 <form *ngIf="toggleNewTripVisibility()">
-  <div class="custom-dropdown-container">
-    <label class="label-container">Neue Fahrt</label>
+  <div class="main-container">
 
-    <!-- Customer dropdown -->
-    <app-custom-dropdown [options]="dropdownCustomer" placeholder="Fahrgast" (optionSelected)="selectCustomer($event)"></app-custom-dropdown>
+    <!-- set new trip container -->
+    <div>
+      <label class="headlineLabel">Neue Fahrt</label>
+      <!-- Customer dropdown -->
+      <app-custom-dropdown [options]="dropdownCustomer" placeholder="Fahrgast" (optionSelected)="selectCustomer($event)"></app-custom-dropdown>
 
-    <!-- Location dropdown -->
-    <app-custom-dropdown [options]="dropdownLocations" placeholder="Abholort" (optionSelected)="selectLocation($event)"></app-custom-dropdown>
+      <!--  start location dropdown -->
+      <app-custom-dropdown [options]="dropdownStartLocations" placeholder="Abholort" (optionSelected)="selectStartLocation($event)"></app-custom-dropdown>
+
+      <!-- End location dropdown -->
+      <app-custom-dropdown [options]="dropdownEndLocations" placeholder="Zielort" (optionSelected)="selectEndLocation($event)"></app-custom-dropdown>
 
 
-    <label class="label-container">test</label>
+      <app-custom-datepicker></app-custom-datepicker>
+
+      <app-custom-timepicker></app-custom-timepicker>
+
+      <textarea class="textField" rows="4" cols="50" placeholder="Anmerkung"></textarea>
+
+      <div class="icon-box">
+        <img src="assets/img/cancel_icon.png" alt="cancel" (click)="cancelNewTripClick()" class="icon">
+        <img src="assets/img/next_icon.png" alt="ok" (click)="checkAndBookNewTripClick()" class="icon">
+      </div>
+
+    </div>
+
+    <!-- set start time -->
+    <div>
+      <label class="headlineLabel">Startzeit ermitteln</label>
+      <app-custom-timepicker></app-custom-timepicker>
+
+      <div class="icon-box">
+        <img src="assets/img/cancel_icon.png" alt="cancel" (click)="cancelStartTimeClick()" class="icon">
+        <img src="assets/img/next_icon.png" alt="ok" (click)="checkAndBookStartTimeClick()" class="icon">
+      </div>
+
+    </div>
+
 
   </div>
 </form>
