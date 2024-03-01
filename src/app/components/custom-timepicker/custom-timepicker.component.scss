@@ -1,11 +1,10 @@
 .timepicker-box{
-  width: 220px;
-  margin-top: 15px;
+  width: 160px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 3px;
   justify-items: center;
-  border-bottom: 1.5px solid black;
+
 
 }
 

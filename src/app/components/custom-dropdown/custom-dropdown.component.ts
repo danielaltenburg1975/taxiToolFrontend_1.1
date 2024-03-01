@@ -10,34 +10,76 @@ export class CustomDropdownComponent {
   @Input() placeholder: string = '';
   @Output() optionSelected = new EventEmitter<{ label: string }>();
 
+  inputFocused: boolean = false;
   showDropdown: boolean = false;
   userInput: string = '';
+  selectedUserInput: string = '';
   filteredOptions: { label: string }[] = [];
 
-  filterOptions() {
-    this.filteredOptions = this.options.filter(option =>
-      option.label.toLowerCase().includes(this.userInput.toLowerCase())
-    );
-    this.showDropdown = true;
-  }
+ /**
+    * Filters the available options based on user input and updates the dropdown list.
+    */
+   filterOptions() {
+     this.filteredOptions = this.options.filter(option =>
+       option.label.toLowerCase().includes(this.userInput.toLowerCase())
+     );
+     this.showDropdown = true;
+   }
 
-  handleIconClick() {
-    this.userInput = ''; // Leere das Input-Feld
-    this.toggleDropdown(); // Dann öffne oder schließe das Dropdown-Menü
-  }
+   /**
+    * Clears the user input and toggles the visibility of the dropdown list.
+    */
+   handleIconClick() {
+     this.userInput = '';
+     this.toggleDropdown();
+   }
 
-  toggleDropdown() {
-    this.showDropdown = !this.showDropdown;
+   /**
+    * Toggles the visibility of the dropdown list and updates filtered options if visible.
+    */
+   toggleDropdown() {
+     this.showDropdown = !this.showDropdown;
 
-    if (this.showDropdown) {
-      this.filterOptions();
-    }
-  }
+     if (this.showDropdown) {
+       this.filterOptions();
+     }
+   }
 
-  selectOption(option: { label: string }) {
-    this.userInput = option.label;
-    this.optionSelected.emit(option);
-    this.showDropdown = false;
-  }
+   /**
+    * Handles the selection of an option, updates the user input, and emits the selected option.
+    * @param option - The selected option.
+    */
+   selectOption(option: { label: string }) {
+     this.userInput = option.label;
+     this.optionSelected.emit({ label: this.userInput });
+     this.showDropdown = false;
+   }
+
+   /**
+    * Handles the blur event of the input field, updates the focused flag, and emits the selected user input.
+    */
+   inputBlur() {
+     this.inputFocused = false;
+
+     if (this.userInput) {
+       this.selectedUserInput = this.userInput;
+       this.optionSelected.emit({ label: this.userInput });
+     }
+   }
+
+   /**
+    * Handles the input event of the input field, updates the filtered options based on user input.
+    */
+   inputChanged() {
+     if (!this.userInput) {
+       this.filteredOptions = this.options;
+     } else {
+       this.filteredOptions = this.options.filter(option =>
+         option.label.toLowerCase().includes(this.userInput.toLowerCase())
+       );
+     }
+
+     this.showDropdown = true;
+   }
 
 }

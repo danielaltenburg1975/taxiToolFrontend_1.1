@@ -9,7 +9,10 @@ import { MatDatepicker } from '@angular/material/datepicker';
 })
 export class NewTripComponent {
 
-newTripFormVisible : boolean = true;
+newTripBoxVisible : boolean = true;
+startTimeBoxVisible : boolean = false;
+selectedStartLocation : string ="";
+selectedEndLocation : string = "";
 
 dropdownCustomer = [
     { label: 'Daniel Altenburg' },
@@ -40,29 +43,37 @@ dropdownCustomer = [
     return this.visibleService.getNewTripVisible();
   }
 
-
+toggleSearchStartTimeBoxVisible(){
+  this.startTimeBoxVisible = true;
+  this.newTripBoxVisible = false;
+}
 
   selectCustomer(option: { label: string }) {
     // Logic for customer selection
     console.log('Selected Customer:', option.label);
   }
 
-  selectStartLocation(option: { label: string }) {
-    // Logic for location selection
-    console.log('Selected Start Location:', option.label);
+  //set the selected entry for start location
+  setSelectStartLocation(option: { label: string }) {
+   this.selectedStartLocation = option.label;
   }
-  selectEndLocation(option: { label: string }) {
-      // Logic for location selection
-      console.log('Selected End Location:', option.label);
+
+  //set the selected entry for end location
+  setSelectEndLocation(option: { label: string }) {
+     this.selectedEndLocation = option.label;
     }
 
   cancelNewTripClick(){
   }
   cancelStartTimeClick(){
+      this.startTimeBoxVisible = false;
+      this.newTripBoxVisible = true;
     }
   checkAndBookNewTripClick(){
   }
-  checkAndBookStartTimeClick(){
+  checkAndSetStartTime(){
+    this.startTimeBoxVisible = false;
+    this.newTripBoxVisible = true;
     }
 
 

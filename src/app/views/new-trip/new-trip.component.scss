@@ -19,22 +19,71 @@
   height:40px;
   cursor: pointer;
 }
+
 .icon-box{
   width:220px;
   margin-top:15px;
   display: flex;
   justify-content: flex-end;
-  }
+}
 
-  .textField {
-      margin-top: 10px;
-      padding: 5px; /* Beispiel-Padding-Wert hinzugefügt */
-      font-size: 16px;
-      border: none;
-      border-bottom: 1.5px solid black;
-      outline: none;
-      width: 220px;
-      cursor: pointer;
-      word-wrap: break-word;
-  }
+.startTimeBox{
+  margin-top:15px;
+  width:240px;
+  border-bottom: 1.5px solid black;
+  display: flex;
+}
+
+.startTimeIcon{
+  padding-top:28px;
+  padding-left: 40px;
+  width:25px;
+  height:25px;
+  cursor: pointer;
+}
+
+.textField {
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1.5px solid black;
+  outline: none;
+  width: 240px;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+
+.searchStartTime-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label-fixed{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.label-location{
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1.5px solid black;
+}
+
+.searchStartTime-timePicker{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timePicker{
+  border-bottom: 1.5px solid black;
+}
+
+.search-iconBig{
+  margin-top:15px;
+  cursor: pointer;
+}
 

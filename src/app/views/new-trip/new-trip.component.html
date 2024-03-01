@@ -2,23 +2,29 @@
   <div class="main-container">
 
     <!-- set new trip container -->
-    <div>
+    <div *ngIf="newTripBoxVisible">
       <label class="headlineLabel">Neue Fahrt</label>
       <!-- Customer dropdown -->
       <app-custom-dropdown [options]="dropdownCustomer" placeholder="Fahrgast" (optionSelected)="selectCustomer($event)"></app-custom-dropdown>
 
       <!--  start location dropdown -->
-      <app-custom-dropdown [options]="dropdownStartLocations" placeholder="Abholort" (optionSelected)="selectStartLocation($event)"></app-custom-dropdown>
+      <app-custom-dropdown [options]="dropdownStartLocations" placeholder="Abholort" (optionSelected)="setSelectStartLocation($event)"></app-custom-dropdown>
 
       <!-- End location dropdown -->
-      <app-custom-dropdown [options]="dropdownEndLocations" placeholder="Zielort" (optionSelected)="selectEndLocation($event)"></app-custom-dropdown>
+      <app-custom-dropdown [options]="dropdownEndLocations" placeholder="Zielort" (optionSelected)="setSelectEndLocation($event)"></app-custom-dropdown>
 
 
       <app-custom-datepicker></app-custom-datepicker>
 
-      <app-custom-timepicker></app-custom-timepicker>
+      <!-- set start time Box-->
+      <div class="startTimeBox">
+        <app-custom-timepicker></app-custom-timepicker>
+        <img src="assets/img/timesearch_icon.png" alt="time search" (click)="toggleSearchStartTimeBoxVisible()" class="startTimeIcon">
+      </div>
 
-      <textarea class="textField" rows="4" cols="50" placeholder="Anmerkung"></textarea>
+
+        <textarea class="textField" rows="4" cols="50" placeholder="Anmerkung"></textarea>
+
 
       <div class="icon-box">
         <img src="assets/img/cancel_icon.png" alt="cancel" (click)="cancelNewTripClick()" class="icon">
@@ -27,15 +33,26 @@
 
     </div>
 
-    <!-- set start time -->
-    <div>
-      <label class="headlineLabel">Startzeit ermitteln</label>
-      <app-custom-timepicker></app-custom-timepicker>
+    <!-- set startTimeSearchBox-->
+    <div *ngIf = "startTimeBoxVisible" class="searchStartTime-container">
 
+      <label class="headlineLabel">Startzeit ermitteln</label>
+      <label class="label-fixed">von:</label>
+      <label class="label-location">{{selectedStartLocation}}</label>
+      <label class="label-fixed">nach:</label>
+      <label class="label-location"l>{{selectedEndLocation}}</label>
+
+      <div class="searchStartTime-timePicker">
+        <label class="label-fixed"> Termin: </label>
+        <div class="timePicker">
+          <app-custom-timepicker></app-custom-timepicker>
+        </div>
+      </div>
+      <img src="assets/img/timesearch_icon.png" alt="time search" class="search-iconBig">
       <div class="icon-box">
         <img src="assets/img/cancel_icon.png" alt="cancel" (click)="cancelStartTimeClick()" class="icon">
-        <img src="assets/img/next_icon.png" alt="ok" (click)="checkAndBookStartTimeClick()" class="icon">
-      </div>
+        <img src="assets/img/next_icon.png" alt="ok" (click)="checkAndSetStartTime()" class="icon">
+        </div>
 
     </div>
 
